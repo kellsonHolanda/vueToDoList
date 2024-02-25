@@ -2,9 +2,9 @@
 import { reactive } from 'vue';
 import Cabecalho from './components/Cabecalho.vue';
 
-import Formulario from './components/Formulario.vue'
-import ListaDeTarefas from './components/ListaDeTarefas.vue'
-// const imagem = "https://getbootstrap.com/docs/5.3/assets/img/vite.svg";
+import Formulario from './components/Formulario.vue';
+import ListaDeTarefas from './components/ListaDeTarefas.vue';
+
 const estado = reactive({
     filtro: 'todas',
     tarefaInicial: '',
@@ -62,12 +62,7 @@ const cadastrarTarefa = () => {
             :trocar-filtro="evento => estado.filtro = evento.target.value"
             :edita-tarefa-inicial="evento => estado.tarefaInicial = evento.target.value" />
         <ListaDeTarefas :tarefas-filtradas="getTarefasFiltradas()" />
-
-
     </div>
-
-
-    <h1>Olá</h1>
 </template>
 
 
